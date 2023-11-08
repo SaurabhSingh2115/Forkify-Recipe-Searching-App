@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Find Meal For Your Ingredients</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+      integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+
+    <script>
+      window.onload = function() {
+        document.getElementById('search-input').addEventListener('input', function() {
+          setTimeout(function() {
+            document.getElementById('meal').innerHTML = '';
+          }, 1000);  // Delay of 1 second
+        });
+      };
+    </script>
+  
+    </script>
+  </head>
+  <style>
+    #search-input::placeholder {
+      opacity: 0.6; 
+    }
+  </style>
+  <body>
+    <div class="navbar navbar-expand-lg navbar-dark bg-dark px-4 px-lg-5 py-3 py-lg-0">
+      <a href="" class="navbar-brand p-0">
+        <h1 class="text-orange m-0" style="color: orange"><i class="fa fa-utensils me-3"></i>Forkify</h1>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+        <span class="fa fa-bars"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <div class="navbar-nav ms-auto py-0 pe-4">
+          <div class="meal-search-box">
+            <input
+              type="text"
+              class="search-control"
+              placeholder="Enter an ingredient"
+              id="search-input"
+            />
+            <div class="btn-container bg-warning">
+              <button type="submit" class="search-btn btn" id="search-btn">
+                <i class="fas fa-search "></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+
+
+    <div class="container">
+      <div class="meal-wrapper">
+        <div class="meal-search">
+          <div class="container-xxl position-relative p-0">
+            <div class="container my-5 py-5">
+              <div class="row align-items-center g-5">
+                <div class="col-lg-6 text-center text-lg-start overflow-hidden">
+                  <!-- Your content goes here -->
+                  <h2 class="title" style="color: white">
+                    <span id="typing-text">Find Meals For Your Ingredients</span>
+                  </h2>
+                  <blockquote style="color: white">
+                    Real food doesn't have ingredients, real food is ingredients.<br />
+                    <cite>- Jamie Oliver</cite>
+                  </blockquote>
+                </div>
+                <div class="rotate-container col-lg-6 text-center text-lg-start hide-hero">
+                  <!-- Hero image goes here -->
+                  <img class="rotate-img img-fluid" src="hero.png" alt="">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+          
+        <div class="meal-result">
+          <div id="meal" style="color: white">
+            <!-- meal item -->
+            <!-- <div class = "meal-item">
+            <div class = "meal-img">
+              <img src = "food.jpg" alt = "food">
+            </div>
+            <div class = "meal-name">
+              <h3>Potato Chips</h3>
+              <a href = "#" class = "recipe-btn">Get Recipe</a>
+            </div>
+          </div> -->
+            <!-- end of meal item -->
+          </div>
+        </div>
+
+        <div class="meal-details">
+          <!-- recipe close btn -->
+          <button
+            type="button"
+            class="btn recipe-close-btn"
+            id="recipe-close-btn"
+          >
+            <i class="fas fa-times"></i>
+          </button>
+
+          <!-- meal content -->
+          <div class="meal-details-content">
+            <!-- <h2 class = "recipe-title">Meals Name Here</h2>
+          <p class = "recipe-category">Category Name</p>
+          <div class = "recipe-instruct">
+            <h3>Instructions:</h3>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo blanditiis quis accusantium natus! Porro, reiciendis maiores molestiae distinctio veniam ratione ex provident ipsa, soluta suscipit quam eos velit autem iste!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet aliquam voluptatibus ad obcaecati magnam, esse numquam nisi ut adipisci in?</p>
+          </div>
+          <div class = "recipe-meal-img">
+            <img src = "food.jpg" alt = "">
+          </div>
+          <div class = "recipe-link">
+            <a href = "#" target = "_blank">Watch Video</a>
+          </div> -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
